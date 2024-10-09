@@ -2,6 +2,12 @@ import pyodbc
 from pymongo import MongoClient
 import sys
 
+driver = '{SQL Server}'
+server = 'DESKTOP-959UNBS'  
+database = 'Adventureworks'
+schema = 'HumanResources'
+table_name = 'Employee'
+
 def connect_to_mongo():
     try:
         client = MongoClient('mongodb://localhost:27017/')
@@ -12,12 +18,7 @@ def connect_to_mongo():
         print('Error occurred while connecting to MongoDB:', e)
         return None
 
-driver = '{SQL Server}'
-server = 'DESKTOP-959UNBS'  
-database = 'Adventureworks'
-schema = 'HumanResources'
-table_name = 'EmployeePayHistory'
-
+# Function to connect to sql
 def connect_to_sql():
     try:
         conn = pyodbc.connect(
