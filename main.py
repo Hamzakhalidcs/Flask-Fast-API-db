@@ -96,8 +96,6 @@ def insert_data():
                 if isinstance(value, set):
                     data[key] = list(value)
 
-        # Simulate data insertion logic here
-        # insert_to_database(data)
         query = """
         INSERT INTO HumanResources.EmployeePayHistory (BusinessEntityID, ModifiedDate, PayFrequency, Rate, RateChangeDate)
         VALUES (?, ?, ?, ?, ?)
