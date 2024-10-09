@@ -42,10 +42,6 @@ def get_data():
 
 
 # Getting the Data from SQL Server
-@app.route('/some_data', methods=['GET'])
-def some_data():
-    return jsonify('Hello from some')
-
 @app.route('/get_data_from_sql', methods=['GET'])
 def get_sql_data():
     conn = connect_to_sql()
